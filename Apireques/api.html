@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    //     const Url = "https://api.github.com/users/hiteshchoudhary";
+    //    const xhr = new XMLHttpRequest()
+
+    //    xhr.open('GET',Url)
+    //    xhr.onreadystatechange = function(){
+    //     console.log(xhr.readyState)
+    //     if(xhr.readyState === 4){
+    //         const data = JSON.parse(this.response);
+    //         console.log(data);
+    //     }
+    //    }
+    //    xhr.send();
+
+    const promiseOne = new Promise(function (resolve, reject) {
+      //Do an async task
+      //DB calls, cryptograpy
+
+      setTimeout(function () {
+        console.log("Async task is complete");
+        resolve();
+      }, 1000);
+    });
+
+    promiseOne.then(function () {
+      console.log("promise consumed");
+    });
+
+    new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        console.log("async task 2");
+        resolve();
+      }, 1000);
+    }).then(function () {
+      console.log("async 2 resolved");
+    });
+
+    const promiseThree = new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        resolve({ username: "tushar", email: "afj@" });
+      }, 1000);
+    });
+
+    promiseThree.then(function (user) {
+      console.log(user);
+    });
+
+    const promiseFour = new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        let error = false;
+
+        if (!error) {
+          resolve({ username: "sshi", pass: "1234r" });
+        } else {
+          reject("error:something wrong");
+        }
+      }, 1000);
+    });
+
+    promiseFour
+      .then((user) => {
+        return user.username;
+      })
+      .then((uname) => {
+        console.log(uname);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        console.log("the promise is reject or resolve");
+      });
+
+    const promiseFive = new Promise((resolve, reject) => {
+      let error = false;
+
+      setTimeout(() => {
+        if (!error) {
+          resolve({ username: "javas", pass: "123" });
+        } else {
+          reject("Errors comes");
+        }
+      }, 1000);
+    });
+
+
+    async function consumepromiseFive(){
+        const response = await promiseFive
+        console.log(response);
+    }
+  </script>
+</html>

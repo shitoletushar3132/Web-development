@@ -1,0 +1,78 @@
+/* div{
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 0, 0, 0.3);
+    transition: 2s;
+} */
+
+/* #opacity{
+    background-color: rgba(0, 255, 153,0.3);
+    opacity: 1;
+} */
+
+/* div:hover{
+    display: inline-block;
+    background-color: black;
+    border-radius: 50%;
+}
+
+button{
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    border-radius: 50%;
+    color:white;
+    background-color: black;
+    margin:0 0 100px 20em ;
+} */
+
+/* div{
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    border: 3px solid black;
+    margin: 10px;
+    padding-top: 25px ;
+    background-color: #7aa874;
+}
+
+div:nth-of-type(2n){
+    background-color: #f7db6a;
+}
+
+
+div:nth-of-type(3n){
+    background-color: #ebb02d;
+}
+*/
+
+/* transform */
+
+/*
+
+#one{
+    transform: rotate(45deg);
+}
+#two{
+    transform: scale(0.5); 
+}
+#three{
+    transform: translatex(100px);
+}
+
+#four{
+    transform: skew(40deg);
+} */
+
+
+div{
+    height: 100px;
+    width: 250px;
+    background-color: #7aa874c0;
+    margin:10px auto;
+    background-image:url("leafs.jpg") ;
+    background-size: cover;
+    color:white;
+}

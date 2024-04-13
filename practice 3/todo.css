@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #cad9eb;
+  margin: 0;
+}
+
+.container {
+  color: black;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 2px black;
+  height: 80%;
+  text-align: center;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+#heading {
+  font-size: 50px;
+  margin: 50px auto;
+}
+
+.input {
+  position: relative;
+}
+
+#inputBox-label {
+  position: absolute;
+  top: -20px;
+}
+#inputBox {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+#inputBox:focus {
+  outline: 0;
+}
+
+.btn{
+  border-radius: 10px;
+  border:none;
+  margin-left:40px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 7px;
+}
+
+.btn:hover{
+  transform: scale(0.98);
+}
+
+.input .btn{
+  background-color: rgba(220, 127, 206, 0.333);
+}
+.input.btn:hover{
+  transform: scale(0.98);
+  background-color: rgb(220, 127, 206);
+}
+
+h3{
+  font-size: 25px;
+  text-decoration: underline;
+ 
+}
+
+.tasks{
+  display: flex;
+  justify-content: center;
+  overflow-y:scroll;
+  scrollbar-width: thin;
+  scrollbar-color:rgba(220, 127, 206, 0.333) rgb(238, 174, 202)  ;
+  height: 40%;
+
+}
+
+.item{
+  text-transform:capitalize;
+  margin-bottom: 15px;
+}
+
+.del.btn{
+  background-color: rgba(255, 0, 0, 0.42);
+}
+

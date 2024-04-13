@@ -1,0 +1,19 @@
+#top {
+  height: 50px;
+  width: 900px;
+  /* margin: 40px auto; */
+  border: 2px solid lightskyblue;
+  border-radius: 10px;
+  background-color: pink;
+  display: flex;
+  justify-content: flex-start;
+  align-content:center;
+}
+
+#top div {
+  height: 25px;
+  width: 80px;
+  border-radius: 15px;
+  margin-left: 5px;
+  font-size: 24px;
+}

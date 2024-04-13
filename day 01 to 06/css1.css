@@ -1,0 +1,88 @@
+/* practise
+h1{
+    color:brown;
+    background-color: aliceblue;
+}
+
+p{
+    color:violet;
+    background-color: thistle;
+}
+
+button{
+    color: yellow;
+    background-color: grey;
+} */
+
+/* h2 {
+  color: orange;
+  color:teal;
+
+  text-align: left;
+}
+p {
+  color: white;
+  background-color: black;
+  text-align: just;
+}
+button {
+  color: rgb(198, 91, 91); 
+  color:rgb(255, 255, 0);
+  background-color: blue;
+  text-align: justify;
+} */
+
+h2{
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: underline;
+    letter-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+h3{
+    color: darkmagenta;
+    text-align: left;
+    font-weight: 900;
+    text-decoration:line-through;
+    text-decoration-color: black;
+    text-decoration-style: wavy;
+    text-decoration-style: dotted;
+    
+}
+h4{
+    text-align: right;
+    font-weight: bolder;
+    text-decoration: overline;
+    text-decoration-style: double;
+    letter-spacing: 10px;
+    letter-spacing:normal;
+}
+p{
+    text-align: justify;
+    font-weight: lighter;
+    line-height:2.5;
+    line-height: normal;
+    font-size: 20px;
+    font-size: none;
+
+
+
+}
+a{
+    text-decoration: none;
+}
+
+div{
+    color: #ffa511;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #00FFF0;
+    text-transform: uppercase;
+}

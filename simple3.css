@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* body{
+    background:url('https://media.geeksforgeeks.org/wp-content/uploads/20210402175040/back22.jpg');
+    background-size:cover;
+} */
+.parallex-1{
+    width: 100%;
+    height: 100%;
+    background: url('https://media.geeksforgeeks.org/wp-content/uploads/20210402175040/back22.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+
+.parallex-1 h2, .parallex-2 h2{
+    margin: auto;
+    position:relative;
+    left:5em;
+    top:10px;
+    width: 250px;
+    height: 32px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.parallex-2{
+    width: 100%;
+    height: 600px;
+    background: url('https://media.geeksforgeeks.org/wp-content/uploads/20210402175040/back22.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.para-2,.para-1{
+    
+    text-align: center;
+    padding : 25px;
+    font-size: 17px;
+    font-family: verdana;
+    background-color: black;
+    color: white;
+}

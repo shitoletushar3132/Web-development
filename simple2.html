@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="simple2.css">
+</head>
+<body>
+    <h1 id="title">GeeksforGeeks Survey Form</h1>
+    <form action="#" id="form">
+        <div class="form-control">
+            <label for="name">Name</label>
+            <input class="box" type="text" id="name" placeholder="Enter Your name">
+        </div>
+
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input class="box" type="email" id="email" placeholder="Enter Your email">
+        </div>
+
+        <div class="form-control">
+            <label for="age">Age</label>
+            <input class="box" type="text" id="age" placeholder="Enter Your age">
+        </div>
+        
+        <div class="form-control">
+            <label for="describes">Which option best describes you?</label>
+            <select name="describes" id="describes" class="box">
+                <option value="student">Student</option>
+                <option value="student">Intern</option>
+                <option value="student">professional</option>
+                <option value="student">other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>Would you recommend GeeksforGeeks to a friend?</label>
+            <input type="radio" name="recommend" id="recommend1">
+            <label for="recommend1">Yes</label>
+
+            <input type="radio" name="recommend" id="recommend2">
+            <label for="recommend2">No</label>
+
+            <input type="radio" name="recommend" id="recommend3">
+            <label for="recommend3">Maybe</label>
+        </div>
+
+        <div class="form-control">
+            <label>Languages and Frameworks known (Check all that apply)</label>
+            
+            <input type="checkbox" id="for1" name="lang">
+            <label for="for1">C</label>
+
+            <input type="checkbox" id="for2" name="lang">
+            <label for="for2">C++</label>
+
+            <input type="checkbox" id="for3" name="lang">
+            <label for="for3">C#</label>
+
+            <input type="checkbox" id="for4" name="lang">
+            <label for="for4">Java</label>
+
+            <input type="checkbox" id="for5" name="lang">
+            <label for="for5">Python</label>
+
+            <input type="checkbox" id="for6" name="lang">
+            <label for="for6">JavaScript</label>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">Any comments or suggestions</label>
+            <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+        </div>
+
+        <div class="form-control">
+            <button type="submit" value="submit">submit</button>
+        </div>
+
+    </form>
+</body>
+</html>

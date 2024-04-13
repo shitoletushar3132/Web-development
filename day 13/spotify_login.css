@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background: #121212;
+  color: #fff;
+}
+
+.title {
+  background-color: #000;
+
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  color: whitesmoke;
+}
+
+.title .logo img {
+  height: 1.6rem;
+  width: 1.6rem;
+  padding-right: 3px;
+}
+.title-name {
+  font-size: medium;
+  font-weight: 700;
+  letter-spacing: 0;
+  position: relative;
+  bottom: 2px;
+}
+.form {
+  padding: 1.8rem 3rem 1.8rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-page {
+  border-radius: 0.6rem;
+  height: 135vh;
+  width: 95vh;
+  background-color: #000;
+  box-shadow: 1px 1px 0.1rem rgba(255, 255, 255, 0.111);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.form-title {
+  font-size: larger;
+  margin: 3rem 0 2rem 0;
+}
+
+.login-options .login-option1 {
+  display: flex;
+  /* justify-content: ; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  border: 0.89px solid rgba(245, 245, 245, 0.456);
+  height: 0.3rem;
+  /* width:90%; */
+  border-radius: 500px;
+  margin: 0.5rem;
+}
+
+.login-option1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content:center; */
+  padding: 1rem;
+  /* padding: 1.5rem; */
+}
+.login-option1 p {
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 40px;
+}
+.login-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  /* padding-top:10px; */
+}
+.blank-box {
+  margin: 2rem 6.25rem 2rem 6.25rem;
+}
+
+.box-line {
+  height: 0px;
+  width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.188);
+}
+
+.terms {
+  position: relative;
+  bottom: 0px;
+  background-color: #000;
+  height: 4rem;
+  font-size: 0.5rem;
+  text-align: center;
+}
+.terms p{
+    padding: 25px;
+    color: #ffffffc5;
+}
+.input-form {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: px;
+}
+
+.input {
+  margin-top: 5px;
+  margin-bottom: 13px;
+  width: 220px;
+  height: 1.2rem;
+  border: 0.89px solid rgba(245, 245, 245, 0.456);
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.349);
+  font-weight: 550;
+  font-family: inherit;
+  font-size: 0.7rem;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
+.switch {
+  font-size: 11px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  margin-right: 120px;
+  font-weight: 600;
+}
+#check {
+  margin-right: 6.5px;
+  background-color: #1ed760;
+}
+
+.login-button {
+  font-size: 13px;
+  font-weight: 650;
+  border-radius: 500px;
+  margin: 0.5rem;
+  border: 0.89px solid rgba(245, 245, 245, 0.456);
+  height: 2.4rem;
+  width: 250px;
+  background-color: #1ed760;
+}
+
+.forget-pass {
+  color: white;
+  font-size: 0.7rem;
+  margin-top: 25px;
+  font-weight: 600;
+}
+
+.new-account {
+  display: flex;
+  margin-top: 20px;
+  font-size: 0.7rem;
+  color: #ffffffe9;
+}
+
+.new-account a {
+  margin-left: 0.4rem;
+  color: #fff;
+  font-weight: 700;
+}

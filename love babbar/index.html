@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style>
+        .container{
+            background-color:beige;
+            border:1px solid black;
+            padding: 2px;
+            margin: 2px;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border:2px solid brown;
+            margin: 2px;
+            padding: 2px;
+        }
+        #one{
+            background-color: aqua;
+        }
+        #two{
+            background-color: blue;
+        }
+        #three{
+            background-color: orange;
+        }
+
+        #four{
+            background-color: brown;
+        }
+    </style> -->
+
+    <style>
+      .container {
+        background-color: aqua;
+        border: 3px solid black;
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+      }
+      .text {
+        margin: 2px;
+        padding: 2px; 
+        border: 2px solid black;
+        width:50%;
+      }
+
+      .text p {
+        /* background-color: brown; */
+        border: 2px solid black;
+        width: 50%;
+       
+      }
+
+      .img{
+        border: 2px solid black;
+
+        overflow: hidden;
+      }
+      @media (min-width: 640px) {
+        .container {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .text p{
+            width: fit-content;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container">
+        <div class="box" id="one">1</div>
+        <div class="box" id="two">2</div>
+        <div class="box" id="three">3</div>
+        <div class="box" id="four">4</div>
+    </div> -->
+
+    <div class="container">
+      <div class="text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          aliquid eius beatae neque veritatis consectetur, ad voluptas. Cumque,
+          iure. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque,
+          nostrum!
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          aliquid eius beatae neque veritatis consectetur, ad voluptas. Cumque,
+          iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+          doloremque rerum delectus. Nihil, eius voluptatibus!
+        </p>
+      </div>
+
+      <div class="img">
+        <img
+          src="E:\codes\web dev\male.jpg"
+          alt="male"
+         
+        />
+      </div>
+    </div>
+  </body>
+</html>
