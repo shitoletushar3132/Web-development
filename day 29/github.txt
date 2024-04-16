@@ -1,0 +1,36 @@
+Git : Free and open source Version control System
+        (tools that help to track change in code)
+
+Github : Website where we host repositories online
+
+find information of account : git config --list
+
+clone : cloning a repository on our local machine | git clone <-some link->
+status : displays the status of the code          | git status
+
+add : add new or changed files in your working    | git add <-file name ->
+        directory to the git staging area 
+
+commit : It is the record of change               | git commit -m "some msg"
+
+push : upload local repo content to remote repo   | git push origin main
+
+init : used to create a new git repo              | git init
+                                                  
+                                                  |  git remote add origin <-link->
+
+                                                  | git remote -v (to verify remote)
+
+                                                  | git branch (to check branch)
+                                                   
+                                                  | git branch -M main (to rename branch)
+
+                                                  | git push origin main
+
+                                                  | git checkout <-branch name-> (to naviage)
+
+                                                  | git checkout -b <-new brach name-> (create a new branch)
+
+                                                  | git checkout -d <-branch name -> (delete a branch)
+
+                                                  
