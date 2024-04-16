@@ -33,4 +33,7 @@ init : used to create a new git repo              | git init
 
                                                   | git checkout -d <-branch name -> (delete a branch)
 
+
+                                                  |||
+
                                                   
