@@ -1,0 +1,9 @@
+creating restful apis
+
+Get /posts to get data for all posts
+post /posts to add a new post
+Get /posts/:id to get one post(using id)
+
+Patch /posts/:id  to update specific post
+
+Delete /posts/:id  to delete specific post
