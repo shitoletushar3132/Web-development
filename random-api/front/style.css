@@ -1,0 +1,66 @@
+/* Reset default margin and padding */
+body, button, p {
+    margin: 0;
+    padding: 0;
+}
+  
+/* Center content vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Light gray background color */
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Style the paragraph */
+#display {
+    font-family: Arial, sans-serif;
+    display: inline-block; /* Change display to inline-block */
+    font-size: 18px;
+    color: #333; /* Dark gray text color */
+    padding: 10px;
+    border: 2px solid #333; /* Dark gray border */
+    border-radius: 5px;
+    background-color: #fff; /* White background color */
+    max-width: 100%; /* Limit width for smaller screens */
+    text-align: center; /* Center text */
+}
+
+/* Style the button */
+#btn {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fff; /* White text color */
+    background-color: #007bff; /* Blue button color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: block; /* Change display to block */
+}
+
+/* Hover effect for the button */
+#btn:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px; /* Add padding for smaller screens */
+    }
+    #display {
+        font-size: 16px; /* Decrease font size for smaller screens */
+    }
+    #btn {
+        font-size: 14px; /* Decrease button font size for smaller screens */
+    }
+}

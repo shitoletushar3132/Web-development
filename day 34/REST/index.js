@@ -48,13 +48,13 @@ app.post("/posts", (req, res) => {
 });
 
 app.get("/posts/:id", (req, res) => {
-  let { id } = req.params;
+  let id  = req.params.id;
   let post = posts.find((p) => id === p.id);
   res.render("show.ejs", { post });
 });
 
 app.patch("/posts/:id", (req, res) => {
-  let { id } = req.params;
+  let id  = req.params.id;
   let newContent = req.body.content;
   let post = posts.find((p) => id === p.id);
   post.content = newContent;
@@ -63,13 +63,13 @@ app.patch("/posts/:id", (req, res) => {
 });
 
 app.get("/posts/:id/edit", (req, res) => {
-  let { id } = req.params;
+  let id  = req.params.id;
   let post = posts.find((p) => id == p.id);
   res.render("edit.ejs", { post });
 });
 
 app.delete("/posts/:id", (req, res) => {
-  let { id } = req.params;
+  let  id  = req.params.id;
    posts = posts.filter((p) => id !== p.id);
 //   res.send("delete success");
   res.redirect('/posts');
