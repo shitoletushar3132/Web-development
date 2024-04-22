@@ -20,7 +20,7 @@
         ).innerText = `the generated number is : ${num}`;
       }
       document.getElementById("btn").addEventListener("click", () => {
-        fetch("https://on-render.onrender.com/random-number")
+        fetch("http://localhost:8089/random-number")
           .then((Response) => Response.json())
           .then((data) => setRand(data.data))
           .catch((error) => console.log("error", error));

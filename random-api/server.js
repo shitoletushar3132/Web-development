@@ -19,5 +19,5 @@ app.get('/random-number',(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("server was running");
+    console.log("server was running",{port});
 })
