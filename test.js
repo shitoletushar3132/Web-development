@@ -50,5 +50,4 @@ async function fetchData(){
         console.error(err);
     }
 }
-
 fetchData();
