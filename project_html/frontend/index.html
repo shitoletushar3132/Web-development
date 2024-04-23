@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      textarea {
+        display: block;
+      }
+      label {
+        font-weight: bolder;
+        font-size: 30px;
+        color: indianred;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="http://localhost:5050/editor" method="post">
+      <label for="code">Editor</label>
+      <textarea
+        name="code"
+        id="code"
+        cols="80"
+        rows="40"
+        placeholder="Write a html code"
+      ></textarea>
+      <button > view the page</button>
+    </form>
+  </body>
+</html>

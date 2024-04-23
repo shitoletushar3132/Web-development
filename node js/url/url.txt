@@ -1,0 +1,3 @@
+/favicon.ico
+/about/search?q=tushar+shitole
+/favicon.ico
