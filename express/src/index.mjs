@@ -1,10 +1,32 @@
 import express, { request } from "express";
+import { query, validationResult } from "express-validator";
 const app = express();
 app.use(express.json());
 
-app.get("/", (req, res) => {
+const loggingMiddleWare = (req, res, next) => {
+  console.log(`${req.method} - ${req.url}`);
+  next();
+};
+
+app.get("/", loggingMiddleWare, (req, res) => {
   res.send("<h1>hello</h1>");
 });
+
+const resolveIndexByUserId = (req, res, next) => {
+  const {
+    body,
+    params: { id },
+  } = req;
+  const parseId = parseInt(id);
+
+  if (isNaN(parseId)) {
+    return res.sendStatus(400);
+  }
+
+  const findUserIndex = data.findIndex((user) => user.id === parseId);
+
+  if (findUserIndex === -1) return res.sendStatus(404);
+};
 
 const data = [
   { id: 1, name: "tusahr", age: 21 },
@@ -18,8 +40,9 @@ const data = [
   { id: 9, name: "tusahr", age: 21 },
 ];
 
-app.get("/api/users", (req, res) => {
-  console.log(req.query);
+app.get("/api/users", query("filter").isString().notEmpty().withMessage('not empty').isLength({min:3,max:10}).withMessage("at least 3 to 10"), (req, res) => {
+    const result = validationResult(req);
+    console.log(result);
   const {
     query: { filter, value },
   } = req;
@@ -41,13 +64,6 @@ app.get("/api/users/:id", (req, res) => {
   if (!finduser) return res.sendStatus(404);
 
   return res.send(finduser);
-});
-
-app.get("/api/products", (req, res) => {
-  res.send([
-    { company: "apple", product: "iphone" },
-    { company: "samsung", product: ["s24", "s23"] },
-  ]);
 });
 
 app.post("/api/users", (req, res) => {
