@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+  />
+</head>
+<body>
+  <h3 id="h">hello</h3>
+  <button id="btn">click</button>
+
+  <script>
+    const home = document.querySelector("#h");
+    const btn = document.querySelector("#btn");
+    const body = document.querySelector("body");
+
+    btn.addEventListener("click", async () => {
+      let response = await fetch("http://localhost:8080/arr");
+      let data = await response.json();
+      console.log(data);
+      const container = document.createElement("div");
+      container.classList.add("d-flex", "justify-content-center", "align-items-center");
+      container.innerHTML = `<div class="card mt-3" style="width: 18rem">
+          <img
+            src="${data.link}"
+            alt=""
+            class="card-img-top"
+          />
+          <div class="card-body">
+            <h5 class="card-title">${data.title}</h5>
+            <p class="card-text">${data.data}</p>
+            <a href="#" class="btn btn-primary">Click for more info</a>
+          </div>
+        </div>`;
+
+      body.appendChild(container);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
