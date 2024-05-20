@@ -6,12 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
-    "express-validator": "^7.0.1",
-    "uuid": "^9.0.1"
-  },
-  "type": "module"
+    "express": "^4.19.2"
+  }
 }
