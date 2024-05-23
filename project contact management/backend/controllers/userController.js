@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 //@access public
 const registerUser = asyncHandler(async (req, res) => {
   const { username, email, password } = req.body;
+  // console.log(req.body);
 
   if (!username || !email || !password) {
     res.status(400);
@@ -43,6 +44,7 @@ const registerUser = asyncHandler(async (req, res) => {
 //@access public
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
+  console.log(req.body);
   if (!email || !password) {
     res.status(400);
     throw new Error("All fields are mandory");
