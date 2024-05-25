@@ -16,12 +16,14 @@ document
         headers: {
           "Content-Type": "application/json",
         },
+
         body: JSON.stringify({ email, password }),
       });
+      console.log("hello");
 
       const data = await response.json();
-      module.exports= (data.accessToken);
-      window.location.replace("index.html");
+      module.exports = data.accessToken;
+      window.location.replace("current.html");
       displayCurrentInfo(token);
       if (response.status === 200) {
         messageDiv.innerHTML = `<div class="alert alert-success m-3">Login successful</div>`;
@@ -40,4 +42,3 @@ document
       console.log(error);
     }
   });
-
