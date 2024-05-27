@@ -19,7 +19,6 @@ document
 
         body: JSON.stringify({ email, password }),
       });
-      console.log("hello");
 
       const data = await response.json();
       module.exports = data.accessToken;

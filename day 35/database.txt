@@ -1,0 +1,4 @@
+//SQL
+//structured query language
+//used to interact with database
+
