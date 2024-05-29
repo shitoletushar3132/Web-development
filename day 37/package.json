@@ -11,7 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "mysql2": "^3.9.8"
+    "method-override": "^3.0.0",
+    "mysql2": "^3.9.8",
+    "path": "^0.12.7",
+    "uuid": "^9.0.1"
   }
 }
