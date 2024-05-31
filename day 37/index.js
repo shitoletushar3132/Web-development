@@ -122,7 +122,12 @@ app.patch("/user/:id", (req, res) => {
   }
 });
 
-app.delete("/user/:id/delete", (req, res) => {
+app.get("/user/:id", (req, res) => {
+  let { id } = req.params;
+  res.render("delete.ejs", { id });
+});
+
+app.delete("/user/:id", (req, res) => {
   let id = req.params.id;
   let { password: formPass, username: newUsername } = req.body;
   let q = `SELECT * FROM user WHERE id="${id}"`;
@@ -132,6 +137,7 @@ app.delete("/user/:id/delete", (req, res) => {
       let user = result[0];
       if (formPass != user.password) {
         res.send("wrong password entered");
+        res.redirect("/user");
       } else {
         let q2 = `DELETE FROM user WHERE id = "${id}"`; // fixed query
         connection.query(q2, (err, result) => {
