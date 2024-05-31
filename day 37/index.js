@@ -122,7 +122,7 @@ app.patch("/user/:id", (req, res) => {
   }
 });
 
-app.post("/user/:id/delete", (req, res) => {
+app.delete("/user/:id/delete", (req, res) => {
   let id = req.params.id;
   let { password: formPass, username: newUsername } = req.body;
   let q = `SELECT * FROM user WHERE id="${id}"`;
