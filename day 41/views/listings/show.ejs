@@ -1,18 +1,33 @@
 <% layout('/layouts/boilerplate') %>
-<body>
-  <h3>Listing Details :</h3>
-  <ul>
-    <li><%=listing.title %></li>
-    <li><%=listing.description %></li>
-    <li>&#8377; <%=listing.price.toLocaleString("en-IN") %></li>
-    <li><%=listing.location %></li>
-    <li><%=listing.country %></li>
-  </ul>
-  <br />
-  <a href="/listings/<%=listing._id %>/edit">Edit this Listing</a>
-  <br />
-  <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
+
+<div class="row">
+  <div class="col-8 offset-3 mt-3">
+    <h3>Listing Details</h3>
+  </div>
+  <div class="card col-6 offset-3 show-card">
+    <img
+      src="<%= listing.image  %>"
+      alt="listing_image"
+      class="card-img-top show-img"
+    />
+    <div class="card-body">
+      <p class="card-text">
+        <b><%= listing.title %></b> 
+        <hr>
+        <%=listing.description %> <hr>
+        &#8377;<%=listing.price.toLocaleString("en-IN") %> <hr>
+        <%=listing.location %> <hr>
+        <%=listing.country %> <hr>
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+<div class="btns">
+  <a href="/listings/<%=listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">Edit</a>
+
+  <form action="/listings/<%= listing._id %>?_method=DELETE" method="post" >
     <input type="hidden" name="_method" value="DELETE" />
-    <button>Delete this listing</button>
+    <button class="btn btn-dark offset-5">Delete </button>
   </form>
-</body>
+</div>
