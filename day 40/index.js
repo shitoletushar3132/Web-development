@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(method_override("_method"));
 
 async function connection() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/whatsapp");
+  await mongoose.connect("mongodb://127.0.0.1:27017/fakewhatsapp");
 }
 connection()
   .then((res) => {
