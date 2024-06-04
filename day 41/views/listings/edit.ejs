@@ -13,12 +13,13 @@
           name="listing[title]"
           value="<%= listing.title %>"
           class="form-control"
+          required
         />
       </div>
 
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea name="listing[description]" class="form-control">
+        <textarea name="listing[description]" class="form-control" required>
       <%= listing.description %></textarea
         >
       </div>
@@ -30,6 +31,7 @@
           name="listing[image]"
           value="<%= listing.image %>"
           class="form-control"
+          required
         />
       </div>
 
@@ -41,6 +43,7 @@
             name="listing[price]"
             value="<%= listing.price %>"
             class="form-control"
+            required
           />
         </div>
 
@@ -51,6 +54,7 @@
             name="listing[country]"
             value="<%= listing.country %>"
             class="form-control"
+            required
           />
         </div>
       </div>
@@ -62,9 +66,10 @@
           name="listing[location]"
           value="<%= listing.location %>"
           class="form-control"
+          required
         />
       </div>
-      <button class="btn btn-dark edit-btn ">Edit</button>
+      <button class="btn btn-dark edit-btn">Edit</button>
     </form>
   </div>
 </div>
