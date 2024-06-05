@@ -10,6 +10,7 @@ const wrapAsync = require("./utils/wrapAsync");
 const ExpressError = require("./utils/ExpressError");
 const { listingSchema, reviewSchema } = require("./schema");
 const Review = require("./models/review");
+const { wrap } = require("module");
 
 main()
   .then(() => {
@@ -123,7 +124,7 @@ app.delete(
 );
 
 // Reviews
-// post Route
+// post review Route
 app.post(
   "/listings/:id/reviews",
   validateReview,
@@ -138,6 +139,17 @@ app.post(
 
     console.log("new review save");
     res.redirect(`/listings/${listing._id}`);
+  })
+);
+
+// Delete review Route
+app.delete(
+  "/listings/:id/reviews/:reviewId",
+  wrapAsync(async (req, res) => {
+    let { id, reviewId } = req.params;
+    await Listing.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
+    await Review.findByIdAndDelete(reviewId);
+    res.redirect(`/listings/${id}`);
   })
 );
 
