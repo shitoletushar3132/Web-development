@@ -5,7 +5,6 @@ const Listing = require("../models/listing");
 const methodOverride = require("method-override");
 const { isLoggedIn, isOwner, validateListing } = require("../middleware");
 router.use(methodOverride("_method"));
-
 const {
   index,
   renderNewForm,
@@ -16,10 +15,19 @@ const {
   destroyListing,
 } = require("../controllers/listings");
 
+const { storage } = require("../cloudConfig");
+const multer = require("multer");
+const upload = multer({ storage });
+
 router
   .route("/")
   .get(wrapAsync(index))
-  .post(isLoggedIn, validateListing, wrapAsync(createListing));
+  .post(
+    isLoggedIn,
+    upload.single("listing[image]"),
+    validateListing,
+    wrapAsync(createListing)
+  );
 
 //New Route
 router.get("/new", isLoggedIn, renderNewForm);
@@ -27,7 +35,13 @@ router.get("/new", isLoggedIn, renderNewForm);
 router
   .route("/:id")
   .get(wrapAsync(showListing))
-  .put(isLoggedIn, isOwner, validateListing, wrapAsync(updateListing))
+  .put(
+    isLoggedIn,
+    isOwner,
+    upload.single("listing[image]"),
+    validateListing,
+    wrapAsync(updateListing)
+  )
   .delete(isLoggedIn, isOwner, wrapAsync(destroyListing));
 
 //edit route
