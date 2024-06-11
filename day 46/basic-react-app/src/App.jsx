@@ -1,12 +1,12 @@
 import "./App.css";
-import { Title } from "./Title";
-import Product from "./Product";
 import ProductList from "./ProductList";
+import Button from "./Button";
+import Form from "./Form";
 
 function App() {
   return (
     <>
-      <ProductList />
+      <Form />
     </>
   );
 }
